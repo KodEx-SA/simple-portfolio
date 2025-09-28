@@ -1,7 +1,8 @@
 const navMenu = document.getElementById("nav-menu"),
     navToggle = document.getElementById("nav-toggle"),
     navItem = document.querySelectorAll(".nav__item"),
-    header = document.getElementById("header");
+    header = document.getElementById("header"),
+    navLinks = document.querySelectorAll(".nav__link");
 
 // Open and close menu
 navToggle.addEventListener("click", () => {
@@ -14,8 +15,8 @@ navItem.forEach((item) => {
     item.addEventListener("click", () => {
         if (navMenu.classList.contains("nav__menu--open")) {
             navMenu.classList.remove("nav__menu--open");
+            changeIcon();
         }
-        changeIcon();
     });
 });
 
@@ -27,6 +28,29 @@ function changeIcon() {
         navToggle.classList.replace("ri-close-line", "ri-menu-3-line");
     }
 }
+
+// Active tab on scroll
+function setActiveLink() {
+    const sections = document.querySelectorAll("section[id]");
+    const scrollY = window.pageYOffset;
+
+    sections.forEach((section) => {
+        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop - 100;
+        const sectionId = section.getAttribute("id");
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            navLinks.forEach((link) => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === `#${sectionId}`) {
+                    link.classList.add("active");
+                }
+            });
+        }
+    });
+}
+
+window.addEventListener("scroll", setActiveLink);
 
 // Typewriter effect
 const typewriterTexts = [
@@ -92,7 +116,7 @@ sr.reveal(".hero__content, .about__content");
 sr.reveal(".hero__img", { origin: "top" });
 
 sr.reveal(
-    ".hero__info-wrapper, .skills__title, .skills__content, .qualification__name, .qualification__item, .service__card, .project__content, .footer__content",
+    ".hero__info-wrapper, .hero__social-list, .skills__title, .skills__content, .qualification__name, .qualification__item, .service__card, .project__content, .footer__content",
     {
         delay: 500,
         interval: 100,
