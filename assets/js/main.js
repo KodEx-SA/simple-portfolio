@@ -37,11 +37,9 @@ if (navToggle && navMenu) {
     navToggle.addEventListener("click", () => {
         navMenu.classList.toggle("nav__menu--open");
         const isOpen = navMenu.classList.contains("nav__menu--open");
-        navToggle.innerHTML = isOpen ? '<i class="ri-close-line"></i>' : '<i class="ri-menu-3-line"></i>';
+        navToggle.innerHTML = isOpen ? '<i class="ri-close-line" aria-hidden="true"></i>' : '<i class="ri-menu-3-line" aria-hidden="true"></i>';
         navToggle.setAttribute("aria-expanded", isOpen);
     });
-} else {
-    console.warn('Navigation menu or toggle not found');
 }
 
 // Close menu on link click
@@ -50,7 +48,7 @@ navItem.forEach((item) => {
         if (navMenu && navMenu.classList.contains("nav__menu--open")) {
             navMenu.classList.remove("nav__menu--open");
             if (navToggle) {
-                navToggle.innerHTML = '<i class="ri-menu-3-line"></i>';
+                navToggle.innerHTML = '<i class="ri-menu-3-line" aria-hidden="true"></i>';
                 navToggle.setAttribute("aria-expanded", false);
             }
         }
@@ -80,14 +78,11 @@ function setActiveLink() {
     });
 }
 
-window.addEventListener("scroll", debounce(setActiveLink, 100));
+window.addEventListener("scroll", debounce(setActiveLink, 50));
 
 // Typewriter effect
 function typeEffect() {
-    if (!typewriterElement) {
-        console.warn('Typewriter element not found');
-        return;
-    }
+    if (!typewriterElement) return;
 
     const currentText = typewriterTexts[currentTextIndex];
     typewriterElement.textContent = "I'm a " + currentText.slice(0, charIndex);
@@ -96,7 +91,7 @@ function typeEffect() {
         charIndex++;
         if (charIndex > currentText.length) {
             isDeleting = true;
-            setTimeout(typeEffect, 1500);
+            setTimeout(typeEffect, 1200);
             return;
         }
     } else {
@@ -105,26 +100,25 @@ function typeEffect() {
             isDeleting = false;
             charIndex = 0;
             currentTextIndex = (currentTextIndex + 1) % typewriterTexts.length;
-            setTimeout(typeEffect, 500);
+            setTimeout(typeEffect, 300);
             return;
         }
     }
 
-    requestAnimationFrame(typeEffect);
+    setTimeout(typeEffect, isDeleting ? 50 : 100);
 }
 typeEffect();
 
-// Header scroll effect and back-to-top
+// Header scroll and back-to-top
 window.addEventListener("scroll", debounce(() => {
     if (header) {
-        header.classList.toggle("header--scroll", window.scrollY > 40);
+        header.classList.toggle("header--scroll", window.scrollY > 50);
     }
     if (backToTop) {
-        backToTop.classList.toggle("show", window.scrollY > 300);
+        backToTop.classList.toggle("show", window.scrollY > 200);
     }
-}, 100));
+}, 50));
 
-// Back-to-top click
 if (backToTop) {
     backToTop.addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -136,7 +130,7 @@ if (themeToggle) {
     const body = document.body;
     function setTheme(theme) {
         body.classList.toggle("light-theme", theme === "light");
-        themeToggle.innerHTML = theme === "light" ? '<i class="ri-moon-line"></i>' : '<i class="ri-sun-line"></i>';
+        themeToggle.innerHTML = theme === "light" ? '<i class="ri-moon-line" aria-hidden="true"></i>' : '<i class="ri-sun-line" aria-hidden="true"></i>';
         localStorage.setItem("theme", theme);
     }
 
@@ -152,14 +146,14 @@ if (themeToggle) {
 // ScrollReveal animations
 if (typeof ScrollReveal !== "undefined") {
     const sr = ScrollReveal({
-        duration: 1500,
-        distance: "80px",
-        delay: 300,
+        duration: 1000,
+        distance: "50px",
+        delay: 200,
         reset: false,
     });
 
     sr.reveal(".hero__content, .about__content, .contact__content", { origin: "left" });
-    sr.reveal(".hero__img, .contact__form-wrapper", { origin: "right" });
+    sr.reveal(".hero__image-wrapper, .contact__form-wrapper", { origin: "right" });
     sr.reveal(".hero__info-wrapper, .hero__social-list, .skills__content, .qualification__item, .service__card, .project__content, .footer__content, .blog__description", {
         interval: 100,
         origin: "bottom"
@@ -167,33 +161,57 @@ if (typeof ScrollReveal !== "undefined") {
 }
 
 // Update footer year
-function updateYear(elementId) {
-    const element = document.getElementById(elementId);
-    if (element) {
-        element.textContent = new Date().getFullYear();
+document.addEventListener("DOMContentLoaded", () => {
+    const yearElement = document.getElementById("current-year");
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
     }
-}
-document.addEventListener("DOMContentLoaded", () => updateYear("current-year"));
+});
 
 // tsParticles configuration
 if (typeof tsParticles !== "undefined") {
     tsParticles.load("particles-js", {
         particles: {
-            number: { value: window.innerWidth < 768 ? 40 : 80, density: { enable: true, value_area: 800 } },
+            number: { 
+                value: window.innerWidth < 576 ? 30 : 60, 
+                density: { enable: true, value_area: 800 } 
+            },
             color: { value: ["#25ab75", "#1e90ff"] },
             shape: { type: "circle" },
-            opacity: { value: 0.5, random: true },
-            size: { value: 3, random: true },
-            line_linked: { enable: true, distance: 150, color: "#25ab75", opacity: 0.4, width: 1 },
-            move: { enable: true, speed: 2, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }
+            opacity: { value: 0.6, random: true },
+            size: { value: 3, random: { enable: true, minimumValue: 1 } },
+            line_linked: { 
+                enable: true, 
+                distance: 120, 
+                color: "#25ab75", 
+                opacity: 0.3, 
+                width: 1 
+            },
+            move: { 
+                enable: true, 
+                speed: 1.5, 
+                direction: "none", 
+                random: false, 
+                straight: false, 
+                out_mode: "out" 
+            }
         },
         interactivity: {
             detect_on: "canvas",
-            events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" }, resize: true },
-            modes: { grab: { distance: 140, line_linked: { opacity: 1 } }, push: { particles_nb: 4 } }
+            events: { 
+                onhover: { enable: true, mode: "grab" }, 
+                onclick: { enable: true, mode: "push" }, 
+                resize: true 
+            },
+            modes: { 
+                grab: { distance: 100, line_linked: { opacity: 0.7 } }, 
+                push: { particles_nb: 3 } 
+            }
         },
-        retina_detect: true
-    });
+        retina_detect: true,
+        fps_limit: 60
+    }).catch(err => console.error("tsParticles failed to load:", err));
 } else {
-    console.warn("tsParticles not loaded");
+    console.warn("tsParticles not loaded. Falling back to static background.");
+    document.getElementById("particles-js").style.background = "linear-gradient(135deg, #1a1a1a, #242424)";
 }
