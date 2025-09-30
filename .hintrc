@@ -6,6 +6,7 @@
     "no-inline-styles": "off",
     "axe/text-alternatives": "off",
     "axe/name-role-value": "off",
-    "disown-opener": "off"
+    "disown-opener": "off",
+    "meta-viewport": "off"
   }
 }
