@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="title" content="Ashley K Motsie - Full Stack Developer Portfolio">
-    <meta name="description" content="Discover Ashley's professional portfolio showcasing expertise in full-stack development, web applications, and innovative solutions.">
-    <meta name="keywords" content="Ashley Motsie, Full Stack Developer, Portfolio, Web Development, React.js, Frontend, Backend, Software Engineer, MERN developer South Africa, Django developer">
+    <meta name="description"
+        content="Discover Ashley's professional portfolio showcasing expertise in full-stack development, web applications, and innovative solutions.">
+    <meta name="keywords"
+        content="Ashley Motsie, Full Stack Developer, Portfolio, Web Development, React.js, Frontend, Backend, Software Engineer, MERN developer South Africa, Django developer">
     <meta name="author" content="Ashley Koketso Motsie">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
@@ -13,24 +16,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO Enhancements -->
     <meta property="og:title" content="Ashley K Motsie - Full Stack Developer Portfolio">
-    <meta property="og:description" content="Discover Ashley's professional portfolio showcasing expertise in full-stack development, web applications, and innovative solutions.">
+    <meta property="og:description"
+        content="Discover Ashley's professional portfolio showcasing expertise in full-stack development, web applications, and innovative solutions.">
     <meta property="og:image" content="./assets/img/my_pic.webp">
     <meta property="og:url" content="https://ashleymotsie.com">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/png" href="./assets/img/favicon.ico">
     <title>Portfolio | Ashley K Motsie</title>
     <!-- Main CSS -->
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="./main.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- Remixicons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-    <!-- tsParticles -->
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.5.0/tsparticles.bundle.min.js"></script>
+    <!-- particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <!-- Schema Markup -->
     <script type="application/ld+json">
     {
@@ -51,7 +56,15 @@
     }
     </script>
 </head>
+
 <body>
+    <!-- Page Loader -->
+    <div class="page-loader" aria-hidden="true">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <span class="loader-text">Loading...</span>
+        </div>
+    </div>
     <!-- Header -->
     <header id="header" class="header">
         <div class="container">
@@ -87,7 +100,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="nav__toggle" id="nav-toggle" aria-expanded="false" role="button" aria-label="Toggle navigation menu" aria-controls="nav-menu">
+                <div class="nav__toggle" id="nav-toggle" aria-expanded="false" role="button"
+                    aria-label="Toggle navigation menu" aria-controls="nav-menu">
                     <i class="ri-menu-3-line" aria-hidden="true"></i>
                 </div>
             </nav>
@@ -104,51 +118,61 @@
                         <h1 class="hero__title">Hi, I'm Ashley K Motsie</h1>
                         <h2 class="hero__subtitle" id="typewriter">I'm a </h2>
                         <p class="hero__description">
-                            I architect and develop full-stack web applications with a focus on performance, accessibility, and cutting-edge technologies.
+                            Full-stack developer crafting performant, accessible web applications with modern
+                            technologies.
                         </p>
                         <div class="hero__buttons">
                             <a href="mailto:motsieashley31@gmail.com" class="btn btn--primary">Hire Me!</a>
                             <a href="#project" class="btn btn--secondary">View Projects</a>
-                            <a href="./assets/Ashley Motsie's Resume_20250807_043908_0000.pdf" download class="btn btn--secondary">Download Resume</a>
+                            <a href="./assets/Ashley_Motsie_Resume.pdf" download class="btn btn--secondary">Download
+                                Resume</a>
                         </div>
                         <ul class="hero__social-list">
                             <li class="hero__social-item">
-                                <a href="mailto:motsieashley31@gmail.com" target="_blank" class="hero__social-link" aria-label="Email">
+                                <a href="mailto:motsieashley31@gmail.com" target="_blank" class="hero__social-link"
+                                    aria-label="Email">
                                     <i class="fa-regular fa-envelope" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li class="hero__social-item">
-                                <a href="https://www.linkedin.com/in/ashley-k-motsie-718686263/" target="_blank" class="hero__social-link" aria-label="LinkedIn">
+                                <a href="https://www.linkedin.com/in/ashley-k-motsie-718686263/" target="_blank"
+                                    class="hero__social-link" aria-label="LinkedIn">
                                     <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li class="hero__social-item">
-                                <a href="https://github.com/KodEx-SA" target="_blank" class="hero__social-link" aria-label="GitHub">
+                                <a href="https://github.com/KodEx-SA" target="_blank" class="hero__social-link"
+                                    aria-label="GitHub">
                                     <i class="fa-brands fa-github" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li class="hero__social-item">
-                                <a href="https://x.com/Ashley_motsie" target="_blank" class="hero__social-link" aria-label="X (Twitter)">
+                                <a href="https://x.com/Ashley_motsie" target="_blank" class="hero__social-link"
+                                    aria-label="X (Twitter)">
                                     <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li class="hero__social-item">
-                                <a href="https://stackoverflow.com/users/codex" target="_blank" class="hero__social-link" aria-label="Stack Overflow">
+                                <a href="https://stackoverflow.com/users/codex" target="_blank"
+                                    class="hero__social-link" aria-label="Stack Overflow">
                                     <i class="fa-brands fa-stack-overflow" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li class="hero__social-item">
-                                <a href="https://www.hackerrank.com/motsieashley31" target="_blank" class="hero__social-link" aria-label="HackerRank">
+                                <a href="https://www.hackerrank.com/motsieashley31" target="_blank"
+                                    class="hero__social-link" aria-label="HackerRank">
                                     <i class="fa-brands fa-hackerrank" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li class="hero__social-item">
-                                <a href="https://leetcode.com/ashleydev" target="_blank" class="hero__social-link" aria-label="LeetCode">
+                                <a href="https://leetcode.com/ashleydev" target="_blank" class="hero__social-link"
+                                    aria-label="LeetCode">
                                     <i class="fa-solid fa-code" aria-hidden="true"></i>
                                 </a>
                             </li>
                             <li class="hero__social-item">
-                                <a href="https://www.tiktok.com/@ashley.programmer" target="_blank" class="hero__social-link" aria-label="TikTok">
+                                <a href="https://www.tiktok.com/@ashley.programmer" target="_blank"
+                                    class="hero__social-link" aria-label="TikTok">
                                     <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
                                 </a>
                             </li>
@@ -165,7 +189,8 @@
                         </div>
                     </div>
                     <div class="hero__image-wrapper">
-                        <img src="assets/img/my_pic.png" alt="Portrait of Ashley K Motsie, full-stack developer" class="hero__img" loading="lazy">
+                        <img src="assets/img/my_pic.png" alt="Portrait of Ashley K Motsie, full-stack developer"
+                            class="hero__img" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -181,7 +206,9 @@
                     <div class="about__content">
                         <h3 class="about__title">Software Developer & Tech Enthusiast</h3>
                         <p class="about__description">
-                            With over 6 years of coding experience, I transform ideas into robust, user-friendly applications using MERN stack, Django, and more. My expertise spans web development, APIs, scalable platforms, automation tools, and innovative solutions. Mindset: Forever a Student, sometimes a Teacher, always a Coder. Vision: Transforming ideas into scalable solutions 🚀. When I'm not coding, I'm exploring the latest tech trends.
+                            With over 6 years of experience, I build robust, user-centric applications using MERN stack,
+                            Django, and more. My expertise includes web development, APIs, and scalable solutions.
+                            Passionate about learning and teaching, I’m driven to create impactful tech solutions.
                         </p>
                         <a href="#project" class="btn btn--primary">Explore Projects</a>
                     </div>
@@ -191,40 +218,40 @@
                             <div class="skills__content">
                                 <h4 class="skills__subtitle">Frontend</h4>
                                 <ul class="skills__list">
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i> HTML <i class="fab fa-html5" aria-hidden="true"></i></li>
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i> CSS <i class="fab fa-css3-alt" aria-hidden="true"></i></li>
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i> JavaScript <i class="fab fa-js-square" aria-hidden="true"></i></li>
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i> Bootstrap <i class="fab fa-bootstrap" aria-hidden="true"></i></li>
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i> React <i class="fab fa-react" aria-hidden="true"></i></li>
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i> React Router</li>
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i> Vite</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i>
+                                        HTML <i class="fab fa-html5" aria-hidden="true"></i></li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i>
+                                        CSS <i class="fab fa-css3-alt" aria-hidden="true"></i></li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i>
+                                        JavaScript <i class="fab fa-js-square" aria-hidden="true"></i></li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i>
+                                        Bootstrap <i class="fab fa-bootstrap" aria-hidden="true"></i></li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i>
+                                        React <i class="fab fa-react" aria-hidden="true"></i></li>
                                 </ul>
                             </div>
                             <div class="skills__content">
                                 <h4 class="skills__subtitle">Backend</h4>
                                 <ul class="skills__list">
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i> PHP <i class="fab fa-php" aria-hidden="true"></i></li>
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i> Node.js <i class="fab fa-node-js" aria-hidden="true"></i></li>
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i> Express.js</li>
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i> Python <i class="fab fa-python" aria-hidden="true"></i></li>
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i> Django</li>
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i> FastAPI</li>
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i> Flask</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i>
+                                        Node.js <i class="fab fa-node-js" aria-hidden="true"></i></li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i>
+                                        Express.js</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i>
+                                        Python <i class="fab fa-python" aria-hidden="true"></i></li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i>
+                                        Django</li>
                                 </ul>
                             </div>
                             <div class="skills__content">
                                 <h4 class="skills__subtitle">Databases</h4>
                                 <ul class="skills__list">
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i> MongoDB <i class="fas fa-database" aria-hidden="true"></i></li>
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i> MySQL <i class="fas fa-database" aria-hidden="true"></i></li>
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i> PostgreSQL <i class="fas fa-database" aria-hidden="true"></i></li>
-                                </ul>
-                            </div>
-                            <div class="skills__content">
-                                <h4 class="skills__subtitle">Other</h4>
-                                <ul class="skills__list">
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i> APIs & Deployment</li>
-                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i> Automation Tools</li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i>
+                                        MongoDB <i class="fas fa-database" aria-hidden="true"></i></li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i>
+                                        MySQL <i class="fas fa-database" aria-hidden="true"></i></li>
+                                    <li class="skills__item"><i class="ri-arrow-right-s-fill" aria-hidden="true"></i>
+                                        PostgreSQL <i class="fas fa-database" aria-hidden="true"></i></li>
                                 </ul>
                             </div>
                         </div>
@@ -247,13 +274,14 @@
                         <div class="qualification__item">
                             <h3 class="qualification__title">AI Developer</h3>
                             <h4 class="qualification__company">AI Global Networks</h4>
-                            <p class="qualification__description">Crafting AI solutions for innovative projects.</p>
+                            <p class="qualification__description">Developing AI-driven solutions for innovative
+                                projects.</p>
                             <span class="qualification__date">Current</span>
                         </div>
                         <div class="qualification__item">
                             <h3 class="qualification__title">IT Technician</h3>
                             <h4 class="qualification__company">Eullafied Tech Solutions</h4>
-                            <p class="qualification__description">Providing IT support and technical solutions.</p>
+                            <p class="qualification__description">Providing technical support and IT solutions.</p>
                             <span class="qualification__date">Current</span>
                         </div>
                     </div>
@@ -264,9 +292,10 @@
                     </h3>
                     <div class="qualification__content">
                         <div class="qualification__item">
-                            <h3 class="qualification__title">Certificate in Information Technology and Computer Science</h3>
+                            <h3 class="qualification__title">Certificate in Information Technology</h3>
                             <h4 class="qualification__company">Orbit TVET College</h4>
-                            <p class="qualification__description">Gained skills in programming, data structures, and software design.</p>
+                            <p class="qualification__description">Studied programming, data structures, and software
+                                design.</p>
                             <span class="qualification__date">Completed 2024</span>
                         </div>
                         <div class="qualification__item">
@@ -279,7 +308,7 @@
                 </div>
                 <div class="qualification__footer">
                     <p class="qualification__footer-text">Download my full resume</p>
-                    <a href="./assets/Ashley Motsie's Resume_20250807_043908_0000.pdf" download class="btn btn--primary">Resume</a>
+                    <a href="./assets/Ashley_Motsie_Resume.pdf" download class="btn btn--primary">Resume</a>
                 </div>
             </div>
         </section>
@@ -294,37 +323,22 @@
                     <div class="service__card">
                         <i class="ri-layout-4-fill service__icon" aria-hidden="true"></i>
                         <h3 class="service__title">Front-End Development</h3>
-                        <p class="service__description">Building responsive UIs with modern frameworks.</p>
-                    </div>
-                    <div class="service__card">
-                        <i class="ri-pen-nib-fill service__icon" aria-hidden="true"></i>
-                        <h3 class="service__title">UI/UX Design</h3>
-                        <p class="service__description">Designing intuitive experiences for web and mobile.</p>
+                        <p class="service__description">Crafting responsive, modern user interfaces.</p>
                     </div>
                     <div class="service__card">
                         <i class="ri-code-s-slash-line service__icon" aria-hidden="true"></i>
-                        <h3 class="service__title">Full-Stack Projects</h3>
-                        <p class="service__description">Delivering end-to-end web applications.</p>
+                        <h3 class="service__title">Full-Stack Development</h3>
+                        <p class="service__description">Building end-to-end web applications.</p>
                     </div>
                     <div class="service__card">
                         <i class="ri-smartphone-line service__icon" aria-hidden="true"></i>
                         <h3 class="service__title">Mobile App Development</h3>
-                        <p class="service__description">Creating Android apps with Flutter and React Native.</p>
-                    </div>
-                    <div class="service__card">
-                        <i class="ri-share-fill service__icon" aria-hidden="true"></i>
-                        <h3 class="service__title">Social Media Marketing</h3>
-                        <p class="service__description">Boosting presence on LinkedIn, X, Instagram.</p>
-                    </div>
-                    <div class="service__card">
-                        <i class="ri-file-fill service__icon" aria-hidden="true"></i>
-                        <h3 class="service__title">MS Office Services</h3>
-                        <p class="service__description">Solutions in Word, Excel, PowerPoint, Power BI.</p>
+                        <p class="service__description">Creating apps with Flutter and React Native.</p>
                     </div>
                     <div class="service__card">
                         <i class="ri-lightbulb-flash-fill service__icon" aria-hidden="true"></i>
                         <h3 class="service__title">Custom Solutions</h3>
-                        <p class="service__description">Tailored software for specific needs.</p>
+                        <p class="service__description">Tailored software for unique needs.</p>
                     </div>
                 </div>
             </div>
@@ -339,70 +353,69 @@
                 <div class="project__wrapper">
                     <div class="project__content">
                         <div class="project__image-wrapper">
-                            <img src="assets/img/real-homes.png" alt="RealHomes luxury real estate platform homepage" class="project__img" loading="lazy">
+                            <img src="assets/img/real-homes.png" alt="RealHomes luxury real estate platform homepage"
+                                class="project__img" loading="lazy">
                         </div>
                         <h3 class="project__title"><a href="https://github.com/KodEx-SA/RealHomes">RealHomes</a></h3>
-                        <p class="project__description">Luxury real estate platform with advanced search and authentication. Built with React, Node.js, MongoDB. (1 star on GitHub)</p>
+                        <p class="project__description">Luxury real estate platform with advanced search and
+                            authentication.</p>
                         <ul class="project__tech">
                             <li>React</li>
                             <li>Node.js</li>
                             <li>MongoDB</li>
                         </ul>
-                        <a href="https://github.com/KodEx-SA/RealHomes" class="project__link">View Project <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+                        <a href="https://github.com/KodEx-SA/RealHomes" class="project__link">View Project <i
+                                class="ri-arrow-right-line" aria-hidden="true"></i></a>
                     </div>
                     <div class="project__content">
                         <div class="project__image-wrapper">
-                            <img src="assets/img/project2.png" alt="Rock Paper Scissors game interface" class="project__img" loading="lazy">
+                            <img src="assets/img/project2.png" alt="Rock Paper Scissors game interface"
+                                class="project__img" loading="lazy">
                         </div>
-                        <h3 class="project__title"><a href="https://github.com/KodEx-SA/rock-paper-scissors">Rock Paper Scissors</a></h3>
-                        <p class="project__description">Interactive game with animations. Built with JavaScript. (3 stars on GitHub)</p>
+                        <h3 class="project__title"><a href="https://github.com/KodEx-SA/rock-paper-scissors">Rock Paper
+                                Scissors</a></h3>
+                        <p class="project__description">Interactive game with engaging animations.</p>
                         <ul class="project__tech">
                             <li>React</li>
                             <li>CSS</li>
                         </ul>
-                        <a href="https://github.com/KodEx-SA/rock-paper-scissors" class="project__link">View Project <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+                        <a href="https://github.com/KodEx-SA/rock-paper-scissors" class="project__link">View Project <i
+                                class="ri-arrow-right-line" aria-hidden="true"></i></a>
                     </div>
                     <div class="project__content">
                         <div class="project__image-wrapper">
-                            <img src="assets/img/my-web-app-temperature-conveter.vercel.app.jpeg" alt="Temperature Converter web app interface" class="project__img" loading="lazy">
+                            <img src="assets/img/my-web-app-temperature-conveter.vercel.app.jpeg"
+                                alt="Temperature Converter web app interface" class="project__img" loading="lazy">
                         </div>
-                        <h3 class="project__title"><a href="https://github.com/KodEx-SA/web_app_temp_conveter">Temperature Converter</a></h3>
-                        <p class="project__description">Fast web app for temperature conversions. Built with JavaScript, React.</p>
+                        <h3 class="project__title"><a
+                                href="https://github.com/KodEx-SA/web_app_temp_conveter">Temperature Converter</a></h3>
+                        <p class="project__description">Efficient web app for temperature conversions.</p>
                         <ul class="project__tech">
                             <li>JavaScript</li>
-                            <li>HTML</li>
-                            <li>CSS</li>
+                            <li>React</li>
                         </ul>
-                        <a href="https://github.com/KodEx-SA/web_app_temp_conveter" class="project__link">View Project <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+                        <a href="https://github.com/KodEx-SA/web_app_temp_conveter" class="project__link">View Project
+                            <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
                     </div>
                     <div class="project__content">
                         <div class="project__image-wrapper">
-                            <img src="assets/img/AI-Assistant.png" alt="AI Assistant Chatbot interface" class="project__img" loading="lazy">
+                            <img src="assets/img/AI-Assistant.png" alt="AI Assistant Chatbot interface"
+                                class="project__img" loading="lazy">
                         </div>
-                        <h3 class="project__title"><a href="https://github.com/KodEx-SA/ReactJs-ChatBot">AI Assistant Chatbot</a></h3>
-                        <p class="project__description">Conversational chatbot with real-time messaging. Built with React, Groq API.</p>
+                        <h3 class="project__title"><a href="https://github.com/KodEx-SA/ReactJs-ChatBot">AI Assistant
+                                Chatbot</a></h3>
+                        <p class="project__description">Real-time conversational chatbot.</p>
                         <ul class="project__tech">
                             <li>React</li>
                             <li>Groq API</li>
                         </ul>
-                        <a href="https://github.com/KodEx-SA/ReactJs-ChatBot" class="project__link">View Project <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="project__content">
-                        <div class="project__image-wrapper">
-                            <img src="assets/img/gauteng-rentals.png" alt="AI Assistant Chatbot interface" class="project__img" loading="lazy">
-                        </div>
-                        <h3 class="project__title"><a href="https://github.com/KodEx-SA/jhb-rental-directory">Gauteng Rental Directory</a></h3>
-                        <p class="project__description">Fast, simple & reliable rental search.</p>
-                        <ul class="project__tech">
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>Javascript</li>
-                        </ul>
-                        <a href="https://github.com/KodEx-SA/jhb-rental-directory" class="project__link">View Project <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+                        <a href="https://github.com/KodEx-SA/ReactJs-ChatBot" class="project__link">View Project <i
+                                class="ri-arrow-right-line" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="project__more">
-                    <a href="https://github.com/KodEx-SA?tab=repositories" class="btn btn--primary">More Projects <i class="fa-solid fa-angle-right" aria-hidden="true"></i></a>
+                    <a href="https://github.com/KodEx-SA?tab=repositories" class="btn btn--primary">More Projects <i
+                            class="fa-solid fa-angle-right" aria-hidden="true"></i></a>
                 </div>
             </div>
         </section>
@@ -413,10 +426,12 @@
                     <h2 class="section__title">Tech Insights</h2>
                     <span class="section__subtitle">Insights & Discussions</span>
                 </div>
-                <p class="blog__description">Sharing thoughts on full-stack development, AI, and tech trends via X and YouTube.</p>
+                <p class="blog__description">Explore my thoughts on full-stack development and AI trends on X and
+                    YouTube.</p>
                 <div class="blog__buttons">
                     <a href="https://x.com/Ashley_motsie" class="btn btn--primary" target="_blank">View on X</a>
-                    <a href="https://www.youtube.com/@Ashley.Programmer" class="btn btn--secondary" target="_blank">Watch on YouTube</a>
+                    <a href="https://www.youtube.com/@Ashley.Programmer" class="btn btn--secondary"
+                        target="_blank">Watch on YouTube</a>
                 </div>
             </div>
         </section>
@@ -429,12 +444,14 @@
                 </div>
                 <div class="contact__wrapper">
                     <div class="contact__content">
-                        <h2 class="contact__title">Ready to Build Something Amazing?</h2>
+                        <h2 class="contact__title">Ready to Build Something Great?</h2>
                         <p class="contact__description">
-                            Let's bring your ideas to life! Reach out via the form or connect on LinkedIn.
+                            Let's turn your ideas into reality. Contact me via the form or connect on LinkedIn.
                         </p>
                         <div class="contact__btn">
-                            <a href="https://www.linkedin.com/in/ashley-k-motsie-718686263/" class="btn btn--secondary">Connect on LinkedIn <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/in/ashley-k-motsie-718686263/"
+                                class="btn btn--secondary">Connect on LinkedIn <i class="fa-brands fa-linkedin-in"
+                                    aria-hidden="true"></i></a>
                         </div>
                     </div>
                     <div class="contact__form-wrapper">
@@ -448,12 +465,14 @@
                             </div>
                             <div class="contact__form-content">
                                 <h3 class="contact__form-title">Send a Message</h3>
-                                <iframe 
-                                    src="https://docs.google.com/forms/d/e/1FAIpQLSeqWf4B23VOFfCueRNFs9aqK8NW8sTISmKnux6VkmflfjQl1A/viewform?embedded=true" 
-                                    width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" title="Contact Form" aria-describedby="contact-form-desc">
+                                <iframe
+                                    src="https://docs.google.com/forms/d/e/1FAIpQLSeqWf4B23VOFfCueRNFs9aqK8NW8sTISmKnux6VkmflfjQl1A/viewform?embedded=true"
+                                    width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0"
+                                    title="Contact Form" aria-describedby="contact-form-desc">
                                     Loading…
                                 </iframe>
-                                <p id="contact-form-desc" class="sr-only">Contact form to send a message to Ashley K Motsie</p>
+                                <p id="contact-form-desc" class="sr-only">Contact form to send a message to Ashley K
+                                    Motsie</p>
                             </div>
                         </div>
                     </div>
@@ -469,58 +488,33 @@
                     <h4 class="footer__title">Connect With Me</h4>
                     <ul class="footer__social-list">
                         <li class="footer__social-item">
-                            <a href="mailto:motsieashley31@gmail.com" target="_blank" class="footer__social-link" aria-label="Email">
+                            <a href="mailto:motsieashley31@gmail.com" target="_blank" class="footer__social-link"
+                                aria-label="Email">
                                 <i class="fa-regular fa-envelope" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li class="footer__social-item">
-                            <a href="https://wa.me/27760932272" target="_blank" class="footer__social-link" aria-label="WhatsApp">
+                            <a href="https://wa.me/27760932272" target="_blank" class="footer__social-link"
+                                aria-label="WhatsApp">
                                 <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li class="footer__social-item">
-                            <a href="https://www.linkedin.com/in/ashley-k-motsie-718686263/" target="_blank" class="footer__social-link" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/in/ashley-k-motsie-718686263/" target="_blank"
+                                class="footer__social-link" aria-label="LinkedIn">
                                 <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li class="footer__social-item">
-                            <a href="https://github.com/KodEx-SA" target="_blank" class="footer__social-link" aria-label="GitHub">
+                            <a href="https://github.com/KodEx-SA" target="_blank" class="footer__social-link"
+                                aria-label="GitHub">
                                 <i class="fa-brands fa-github" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li class="footer__social-item">
-                            <a href="https://x.com/Ashley_motsie" target="_blank" class="footer__social-link" aria-label="X (Twitter)">
+                            <a href="https://x.com/Ashley_motsie" target="_blank" class="footer__social-link"
+                                aria-label="X (Twitter)">
                                 <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li class="footer__social-item">
-                            <a href="https://web.facebook.com/ashley.programmer/" target="_blank" class="footer__social-link" aria-label="Facebook">
-                                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li class="footer__social-item">
-                            <a href="https://www.youtube.com/@Ashley.Programmer" target="_blank" class="footer__social-link" aria-label="YouTube">
-                                <i class="fa-brands fa-youtube" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li class="footer__social-item">
-                            <a href="https://stackoverflow.com/users/codex" target="_blank" class="footer__social-link" aria-label="Stack Overflow">
-                                <i class="fa-brands fa-stack-overflow" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li class="footer__social-item">
-                            <a href="https://www.hackerrank.com/motsieashley31" target="_blank" class="footer__social-link" aria-label="HackerRank">
-                                <i class="fa-brands fa-hackerrank" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li class="footer__social-item">
-                            <a href="https://leetcode.com/ashleydev" target="_blank" class="footer__social-link" aria-label="LeetCode">
-                                <i class="fa-solid fa-code" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li class="footer__social-item">
-                            <a href="https://www.tiktok.com/@ashley.programmer" target="_blank" class="footer__social-link" aria-label="TikTok">
-                                <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
                             </a>
                         </li>
                     </ul>
@@ -534,6 +528,7 @@
     <!-- ScrollReveal -->
     <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
     <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
+
 </html>

@@ -32,6 +32,13 @@ function debounce(func, wait) {
     };
 }
 
+// Page loader
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    document.body.classList.add("page-loaded");
+  }, 800);
+});
+
 // Toggle mobile menu
 if (navToggle && navMenu) {
     navToggle.addEventListener("click", () => {
@@ -168,50 +175,72 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// tsParticles configuration
-if (typeof tsParticles !== "undefined") {
-    tsParticles.load("particles-js", {
-        particles: {
-            number: { 
-                value: window.innerWidth < 576 ? 30 : 60, 
-                density: { enable: true, value_area: 800 } 
+// particles.js configuration
+document.addEventListener("DOMContentLoaded", () => {
+    if (document.getElementById('particles-js') && typeof particlesJS !== "undefined") {
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 100,
+                    "density": { "enable": true, "value_area": 800 }
+                },
+                "color": { "value": "#8b5cf6" },
+                "shape": {
+                    "type": "circle",
+                    "stroke": { "width": 0, "color": "#000000" }
+                },
+                "opacity": {
+                    "value": 0.7,
+                    "random": true,
+                    "anim": { "enable": true, "speed": 1, "opacity_min": 0.3, "sync": false }
+                },
+                "size": {
+                    "value": 4,
+                    "random": true,
+                    "anim": { "enable": true, "speed": 2, "size_min": 1, "sync": false }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 120,
+                    "color": "#8b5cf6",
+                    "opacity": 0.6,
+                    "width": 1.5
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2.5,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": { "enable": true, "rotateX": 600, "rotateY": 1200 }
+                }
             },
-            color: { value: ["#25ab75", "#1e90ff"] },
-            shape: { type: "circle" },
-            opacity: { value: 0.6, random: true },
-            size: { value: 3, random: { enable: true, minimumValue: 1 } },
-            line_linked: { 
-                enable: true, 
-                distance: 120, 
-                color: "#25ab75", 
-                opacity: 0.3, 
-                width: 1 
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab",
+                        "parallax": { "enable": true, "force": 60, "smooth": 10 }
+                    },
+                    "onclick": { "enable": true, "mode": "push" },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": { "distance": 140, "line_linked": { "opacity": 1 } },
+                    "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 },
+                    "repulse": { "distance": 200, "duration": 0.4 },
+                    "push": { "particles_nb": 4 },
+                    "remove": { "particles_nb": 2 }
+                }
             },
-            move: { 
-                enable: true, 
-                speed: 1.5, 
-                direction: "none", 
-                random: false, 
-                straight: false, 
-                out_mode: "out" 
-            }
-        },
-        interactivity: {
-            detect_on: "canvas",
-            events: { 
-                onhover: { enable: true, mode: "grab" }, 
-                onclick: { enable: true, mode: "push" }, 
-                resize: true 
-            },
-            modes: { 
-                grab: { distance: 100, line_linked: { opacity: 0.7 } }, 
-                push: { particles_nb: 3 } 
-            }
-        },
-        retina_detect: true,
-        fps_limit: 60
-    }).catch(err => console.error("tsParticles failed to load:", err));
-} else {
-    console.warn("tsParticles not loaded. Falling back to static background.");
-    document.getElementById("particles-js").style.background = "linear-gradient(135deg, #1a1a1a, #242424)";
-}
+            "retina_detect": true
+        });
+        console.log("particles.js loaded successfully");
+    } else {
+        console.warn("particles.js not loaded or #particles-js element missing. Falling back to static background.");
+        document.getElementById("particles-js").style.background = "linear-gradient(135deg, #1a1a1a, #242424)";
+    }
+});
