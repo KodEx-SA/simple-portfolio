@@ -8,11 +8,11 @@ const navMenu = document.getElementById("nav-menu"),
       backToTop = document.querySelector(".back-to-top");
 
 const typewriterTexts = [
-    "Frontend Web Developer",
-    "Software Engineer",
-    "Full Stack Developer",
-    "AI Developer",
-    "Creative Problem Solver",
+    "Web Development",
+    "Software Engineering",
+    "Full Stack Development",
+    "AI Development & Integration",
+    "Creative Problem Solving",
 ];
 
 let currentTextIndex = 0;
